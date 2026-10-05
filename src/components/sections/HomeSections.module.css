@@ -1,0 +1,506 @@
+/* ---------------------------------------------------------------- Hero --- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-block: 72px;
+}
+
+.heroCopy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.heroLead {
+  line-height: 31px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--forest);
+}
+
+.trust li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--leaf);
+}
+
+.heroMedia {
+  position: relative;
+  flex: 0 1 600px;
+  min-width: 0;
+}
+
+.heroPhoto {
+  width: 100%;
+  aspect-ratio: 600 / 660;
+  border-radius: 28px;
+}
+
+.fundCard {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  width: 300px;
+  max-width: calc(100% - 48px);
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.fundCard:hover {
+  transform: translateY(-2px);
+}
+
+.fundCardLabel {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--moss);
+}
+
+.fundCardValue {
+  font-weight: 600;
+  font-size: 34px;
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.fundCardNote {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--moss);
+}
+
+/* ---------------------------------------------------------- Two sides --- */
+.twoSides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  padding-block: 104px;
+}
+
+.centerHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.centerLead {
+  max-width: 720px;
+  font-size: clamp(16px, 1.32vw, 19px);
+  line-height: 29px;
+}
+
+.sidesRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  container-type: inline-size;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+}
+
+.sidePhoto {
+  width: 100%;
+  aspect-ratio: 648 / 440;
+  border-radius: 24px;
+}
+
+.sideTitle {
+  font-weight: 600;
+  font-size: clamp(30px, 2.64vw, 38px);
+  color: var(--pine);
+}
+
+.vs {
+  position: absolute;
+  left: 50%;
+  /* Centre of the photos: half of ((row - gap) / 2) * 440/648 */
+  top: calc(((100cqw - 32px) / 2) * 0.679 / 2);
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--forest);
+}
+
+/* ------------------------------------------------------ Generic block --- */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-block: 104px;
+}
+
+.blockLg {
+  gap: 56px;
+}
+
+.rowHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.stackHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* ------------------------------------------------------------ Fund band --- */
+.fundBand {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding-block: 104px;
+}
+
+.fundCopy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.fundTitle {
+  font-weight: 600;
+  font-size: clamp(44px, 5.28vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--band-text);
+}
+
+.fundBody {
+  font-weight: 500;
+  font-size: clamp(16px, 1.32vw, 19px);
+  line-height: 30px;
+  color: var(--band-sub);
+}
+
+.progressCard {
+  flex: 0 1 560px;
+  min-width: 0;
+  background: var(--white);
+  color: var(--pine);
+  border-radius: 28px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.pcLabel {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--moss);
+}
+
+.pcValue {
+  font-weight: 600;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 1.055;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.pcRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.pcRow span:first-child {
+  font-weight: 800;
+  color: var(--forest);
+}
+
+.pcRow span:last-child {
+  font-weight: 700;
+  color: var(--moss);
+}
+
+.pcStats {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+}
+
+.pcStats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.pcStats dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 38px;
+  color: var(--forest);
+}
+
+.pcStats dt {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--moss);
+}
+
+/* -------------------------------------------------------- Money steps --- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.step {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepPhoto {
+  width: 100%;
+  height: 260px;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+}
+
+.stepTitle {
+  font-weight: 600;
+  font-size: clamp(26px, 2.2vw, 32px);
+  color: var(--pine);
+}
+
+/* ------------------------------------------------------------ Creator --- */
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  padding-block: 104px;
+}
+
+.creatorPhoto {
+  flex: 0 1 560px;
+  aspect-ratio: 560 / 600;
+  border-radius: 28px;
+  min-width: 0;
+}
+
+.creatorCopy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.creatorTitle {
+  font-weight: 600;
+  font-size: clamp(40px, 4.45vw, 64px);
+  line-height: 1.0625;
+  letter-spacing: -0.02em;
+  color: var(--pine);
+}
+
+/* --------------------------------------------------------- Newsletter --- */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-block: 88px;
+  text-align: center;
+}
+
+.newsTitle {
+  font-weight: 600;
+  font-size: clamp(30px, 3.34vw, 48px);
+  letter-spacing: -0.02em;
+  color: var(--pine);
+}
+
+.newsBody {
+  font-weight: 500;
+  font-size: clamp(16px, 1.25vw, 18px);
+  color: var(--moss);
+}
+
+/* ---------------------------------------------------------- Responsive --- */
+@media (max-width: 1080px) {
+  .hero,
+  .fundBand,
+  .creator {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heroMedia,
+  .progressCard,
+  .creatorPhoto {
+    flex: none;
+    width: 100%;
+  }
+  .heroPhoto {
+    aspect-ratio: 4 / 3;
+  }
+  .creatorPhoto {
+    aspect-ratio: 4 / 3;
+  }
+  .fundBand,
+  .creator {
+    gap: 48px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .stepPhoto {
+    height: auto;
+    aspect-ratio: 420 / 260;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 32px 48px;
+    gap: 32px;
+  }
+  .heroCopy {
+    gap: 20px;
+  }
+  .heroLead {
+    line-height: 1.55;
+  }
+  .ctas {
+    width: 100%;
+    flex-direction: column;
+  }
+  .ctas :global(.btn) {
+    width: 100%;
+  }
+  .trust {
+    gap: 10px 20px;
+    font-size: 13px;
+  }
+  .heroPhoto {
+    aspect-ratio: 350 / 380;
+  }
+  .fundCard {
+    left: 16px;
+    bottom: 16px;
+    width: auto;
+    right: 16px;
+    max-width: none;
+  }
+  .twoSides,
+  .block,
+  .fundBand,
+  .creator {
+    padding-block: 64px;
+  }
+  .twoSides {
+    gap: 40px;
+    align-items: stretch;
+  }
+  .centerHead {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .centerLead {
+    line-height: 1.55;
+  }
+  .sidesRow {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .vs {
+    display: none;
+  }
+  .block {
+    gap: 32px;
+  }
+  .rowHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .progressCard {
+    padding: 28px 24px;
+    border-radius: 24px;
+  }
+  .pcStats {
+    gap: 28px;
+  }
+  .pcStats dd {
+    font-size: 32px;
+  }
+  .stepBody {
+    padding: 24px;
+  }
+  .newsletter {
+    padding-block: 64px;
+    align-items: stretch;
+  }
+}

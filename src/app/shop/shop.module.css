@@ -1,0 +1,220 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+  gap: 56px;
+  padding-block: 56px;
+}
+
+.headCopy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.headCopy a:hover {
+  color: var(--leaf);
+}
+
+.fundMini {
+  flex: 0 1 400px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: var(--mint);
+}
+
+.fundMiniLabel {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: var(--leaf);
+}
+
+.fundMiniValue {
+  font-weight: 600;
+  font-size: clamp(32px, 2.8vw, 40px);
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+.fundMiniNote {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--moss);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 8px;
+}
+
+.chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sort {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--moss);
+  white-space: nowrap;
+}
+
+.sort select {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--forest);
+  cursor: pointer;
+  padding: 6px 18px 6px 4px;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 8px) 55%, calc(100% - 4px) 55%;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
+}
+
+.sort option {
+  background: var(--white);
+  color: var(--pine);
+}
+
+.gridWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-block: 40px 104px;
+}
+
+.empty {
+  padding: 48px 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--moss);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 40px;
+}
+
+.nextDrop {
+  min-height: 500px;
+  border-radius: 20px;
+  background: var(--mint);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.coming {
+  font-weight: 600;
+  font-size: clamp(44px, 4.45vw, 64px);
+  line-height: 1.0625;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+.fundTile {
+  display: flex;
+  min-height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fundTileCopy {
+  flex: 1;
+  min-width: 0;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.fundTileTitle {
+  font-weight: 600;
+  font-size: clamp(30px, 2.8vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.fundTileBody {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--band-sub);
+}
+
+.fundTilePhoto {
+  flex: 0 1 340px;
+  min-width: 0;
+}
+
+@media (max-width: 1080px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+  .fundMini {
+    flex: none;
+  }
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+  .nextDrop {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding-block: 32px;
+  }
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chips {
+    gap: 8px;
+  }
+  .sort {
+    margin-left: 0;
+  }
+  .gridWrap {
+    padding-block: 24px 64px;
+  }
+  .fundTile {
+    flex-direction: column-reverse;
+  }
+  .fundTileCopy {
+    padding: 32px 24px;
+  }
+  .fundTilePhoto {
+    flex: none;
+    aspect-ratio: 350 / 240;
+  }
+  .nextDrop {
+    min-height: 300px;
+    padding: 28px;
+  }
+}

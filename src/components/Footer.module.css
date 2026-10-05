@@ -1,0 +1,141 @@
+.announcement {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--gutter);
+  color: var(--band-mint);
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+}
+
+.annDesktop {
+  white-space: pre;
+}
+
+.annMobile {
+  display: none;
+}
+
+.footer {
+  padding: 80px 0 40px;
+}
+
+.top {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.brand {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tagline {
+  font-weight: 600;
+  font-size: clamp(40px, 4.45vw, 64px);
+  line-height: 1.0625;
+  letter-spacing: -0.02em;
+  color: var(--band-text);
+}
+
+.body {
+  max-width: 460px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--band-sub);
+}
+
+.columns {
+  display: flex;
+  gap: 72px;
+  white-space: nowrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--band-mint);
+}
+
+.col a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.col .head {
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.04px;
+  color: var(--band-pill);
+  text-decoration: none;
+}
+
+.rule {
+  height: 1px;
+  background: var(--band-rule);
+  margin: 56px 0 40px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.bottom p:first-child {
+  font-weight: 500;
+  color: var(--band-sub);
+}
+
+.bottom p:last-child {
+  font-weight: 700;
+  color: var(--band-mint);
+}
+
+@media (max-width: 1080px) {
+  .annDesktop {
+    display: none;
+  }
+  .annMobile {
+    display: block;
+  }
+  .top {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    height: 34px;
+    font-size: 11px;
+  }
+  .footer {
+    padding: 56px 0 32px;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+    white-space: normal;
+  }
+  .rule {
+    margin: 40px 0 24px;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

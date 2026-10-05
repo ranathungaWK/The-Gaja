@@ -1,0 +1,161 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-block: 48px 104px;
+  min-height: 60vh;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--pine);
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.steps li > span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.steps li[data-state="done"] > span {
+  background: var(--leaf);
+  color: var(--white);
+}
+
+.steps li[data-state="current"] > span {
+  background: var(--forest);
+  color: var(--white);
+}
+
+.steps li[data-state="next"] {
+  color: var(--moss);
+}
+
+.steps li[data-state="next"] > span {
+  background: var(--mint);
+  color: var(--forest);
+}
+
+.steps a:hover {
+  color: var(--leaf);
+}
+
+.steps .stepRule {
+  width: 48px;
+  height: 2px;
+  background: var(--sage);
+}
+
+.title {
+  font-weight: 600;
+  font-size: clamp(44px, 5.56vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--pine);
+}
+
+.columns {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+.form {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.groupTight {
+  gap: 14px;
+}
+
+.groupTitle {
+  padding: 0;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: clamp(26px, 2.2vw, 32px);
+  color: var(--pine);
+}
+
+.groupTight .groupTitle {
+  margin-bottom: 14px;
+}
+
+.skeleton {
+  height: 480px;
+  border-radius: 28px;
+  background: var(--mist);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 48px;
+  border-radius: 28px;
+  background: var(--mist);
+  border: 1px solid var(--line);
+}
+
+.emptyTitle {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+@media (max-width: 1080px) {
+  .columns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    gap: 24px;
+    padding-block: 32px 64px;
+  }
+  .steps {
+    gap: 8px;
+    font-size: 13px;
+  }
+  .steps .stepRule {
+    width: 16px;
+  }
+  .form {
+    gap: 36px;
+  }
+  .empty {
+    padding: 28px;
+  }
+}

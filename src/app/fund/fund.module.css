@@ -1,0 +1,367 @@
+.hero {
+  gap: 80px;
+  padding-block: 96px;
+}
+
+.heroTitle {
+  font-weight: 600;
+  font-size: clamp(44px, 5.28vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.heroLead {
+  font-weight: 500;
+  font-size: clamp(16px, 1.32vw, 19px);
+  line-height: 30px;
+  color: var(--band-sub);
+}
+
+/* ---------------------------------------------------------- Donate card --- */
+.donate {
+  flex: 0 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 40px;
+  border-radius: 32px;
+  background: var(--white);
+  color: var(--pine);
+  scroll-margin-top: 110px;
+}
+
+.donateTitle {
+  font-weight: 600;
+  font-size: clamp(26px, 2.2vw, 32px);
+  color: var(--forest);
+}
+
+.donateLabel {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--moss);
+}
+
+.donateChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dChip {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.dChip:hover {
+  border-color: var(--leaf);
+}
+
+.dChip[aria-checked="true"] {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+
+.amountBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--mist);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--forest);
+}
+
+.amountBox:focus-within {
+  border-color: var(--leaf);
+}
+
+.amountBox input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--forest);
+  outline: none;
+}
+
+.donateNote {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--moss);
+}
+
+/* ------------------------------------------------------------- Progress --- */
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-block: 96px;
+}
+
+.raisedLabel {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--moss);
+}
+
+.raised {
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: clamp(52px, 7.22vw, 104px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+.progressRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 16px;
+  margin-top: -12px;
+}
+
+.progressRow span:first-child {
+  font-weight: 800;
+  color: var(--forest);
+}
+
+.progressRow span:last-child {
+  font-weight: 700;
+  color: var(--moss);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 32px;
+  border-radius: 24px;
+  background: var(--mist);
+}
+
+.stat p:first-child {
+  font-weight: 600;
+  font-size: clamp(40px, 3.89vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+.stat p:last-child {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--moss);
+}
+
+/* ----------------------------------------------------------- Milestones --- */
+.milestones {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.milestone.reached {
+  border-color: transparent;
+}
+
+.msAmount {
+  font-weight: 600;
+  font-size: clamp(28px, 2.36vw, 34px);
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.msTitle {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--forest);
+}
+
+.msBody {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--moss);
+}
+
+.reached .msAmount,
+.reached .msTitle {
+  color: var(--band-text);
+}
+
+.reached .msBody {
+  color: var(--band-sub);
+}
+
+/* ------------------------------------------------------------- Receipts --- */
+.receiptsWrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px;
+  align-items: start;
+  padding-block: 104px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.colTitle {
+  font-weight: 600;
+  font-size: clamp(32px, 3.06vw, 44px);
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+.receipt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: var(--mist);
+}
+
+.receiptTitle {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--forest);
+}
+
+.receiptDate {
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--moss);
+}
+
+.receiptDate a {
+  color: var(--leaf);
+  font-weight: 700;
+}
+
+.receiptAmount {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.updatePhoto {
+  height: 260px;
+  border-radius: 24px;
+}
+
+.updatePhoto :global(.photo__caption) {
+  max-width: 160px;
+}
+
+.updateTitle {
+  font-weight: 600;
+  font-size: clamp(24px, 1.95vw, 28px);
+  color: var(--forest);
+}
+
+/* -------------------------------------------------------------- Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.galleryItem {
+  aspect-ratio: 1;
+  border-radius: 24px;
+}
+
+.galleryItem :global(.photo__caption) {
+  max-width: 160px;
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    gap: 48px;
+  }
+  .donate {
+    flex: none;
+    width: 100%;
+  }
+  .milestones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .receiptsWrap {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 56px !important;
+  }
+  .donate {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+  .dChip {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .progress {
+    gap: 28px;
+    padding-block: 64px;
+  }
+  .milestones {
+    grid-template-columns: 1fr;
+  }
+  .receiptsWrap {
+    padding-block: 64px;
+    gap: 48px;
+  }
+  .receipt {
+    padding: 18px 20px;
+  }
+  .gallery {
+    gap: 12px;
+  }
+  .galleryItem {
+    border-radius: 18px;
+  }
+  .galleryItem :global(.photo__caption) {
+    display: none;
+  }
+}

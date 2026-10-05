@@ -1,0 +1,246 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding-block: 88px;
+  text-align: center;
+}
+
+.lead {
+  max-width: 640px;
+  font-weight: 500;
+  font-size: clamp(17px, 1.39vw, 20px);
+  line-height: 30px;
+  color: var(--moss);
+  overflow-wrap: anywhere;
+}
+
+.note {
+  max-width: 640px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  background: var(--mint);
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+  padding-block: 24px;
+}
+
+.orderCard {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--mist);
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: clamp(26px, 2.2vw, 32px);
+  color: var(--pine);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lineThumb {
+  flex: none;
+  width: 72px;
+  height: 86px;
+  border-radius: 12px;
+}
+
+.lineText {
+  flex: 1;
+  min-width: 0;
+}
+
+.lineText p:first-child {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--pine);
+}
+
+.lineText p:last-child {
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--moss);
+  white-space: pre;
+}
+
+.linePrice {
+  font-weight: 800;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--pine);
+}
+
+.metaLabel {
+  margin-bottom: 8px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.96px;
+  color: var(--leaf);
+}
+
+.impact {
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.impactPhoto {
+  height: 260px;
+  gap: 6px;
+}
+
+.impactBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 36px 40px;
+}
+
+.impactValue {
+  font-weight: 600;
+  font-size: clamp(48px, 4.72vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.impactText {
+  font-weight: 500;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 28px;
+  color: var(--band-sub);
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-block: 64px 104px;
+}
+
+.nextTitle {
+  font-weight: 600;
+  font-size: clamp(30px, 2.78vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.nextSteps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.nextSteps li {
+  display: flex;
+  gap: 18px;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--mist);
+}
+
+.nextSteps li > span {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.nextSteps li p:first-child {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--pine);
+}
+
+.nextSteps li p:last-child {
+  margin-top: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--moss);
+}
+
+@media (max-width: 1080px) {
+  .details,
+  .nextSteps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .thanks {
+    padding-block: 56px 32px;
+  }
+  .thanks svg {
+    width: 72px;
+    height: 72px;
+  }
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .orderCard {
+    padding: 24px 20px;
+  }
+  .meta {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .impactBody {
+    padding: 28px 24px;
+  }
+  .impactPhoto {
+    height: 200px;
+  }
+  .next {
+    padding-block: 48px 64px;
+  }
+}

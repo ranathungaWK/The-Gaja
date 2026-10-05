@@ -1,0 +1,128 @@
+.summary {
+  flex: 0 0 480px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 36px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--mist);
+  position: sticky;
+  top: 108px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: clamp(26px, 2.1vw, 30px);
+  color: var(--pine);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lineThumb {
+  flex: none;
+  width: 64px;
+  height: 76px;
+  border-radius: 12px;
+}
+
+.lineText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lineText a {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--pine);
+}
+
+.lineText p {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--moss);
+  white-space: pre;
+}
+
+.linePrice {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--pine);
+  white-space: nowrap;
+}
+
+.addOn {
+  background: var(--white);
+  border: 1.5px solid var(--leaf);
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.addOnTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--forest);
+}
+
+.addOnTitle::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--leaf);
+}
+
+.addOnBody {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--moss);
+}
+
+.addOnChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.impact {
+  background: var(--mint);
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--forest);
+}
+
+@media (max-width: 1080px) {
+  .summary {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+  .addOn {
+    padding: 18px;
+  }
+}

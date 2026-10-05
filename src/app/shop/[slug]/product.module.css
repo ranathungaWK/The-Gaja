@@ -1,0 +1,388 @@
+.crumb {
+  padding-block: 28px;
+}
+
+.crumb a:hover {
+  color: var(--leaf);
+}
+
+.main {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  padding-block: 8px 96px;
+}
+
+/* -------------------------------------------------------------- Gallery --- */
+.gallery {
+  flex: 0 1 680px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 108px;
+}
+
+.mainPhoto {
+  width: 100%;
+  aspect-ratio: 680 / 740;
+  border-radius: 28px;
+}
+
+.mainTag {
+  left: 20px;
+  top: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.thumb {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  gap: 10px;
+}
+
+.thumb[aria-current="true"] {
+  border-color: var(--leaf);
+}
+
+.thumb :global(.photo__caption) {
+  max-width: 98px;
+}
+
+/* ----------------------------------------------------------------- Info --- */
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: clamp(40px, 4.45vw, 64px);
+  line-height: 1.0625;
+  letter-spacing: -0.02em;
+  color: var(--pine);
+}
+
+.price {
+  font-weight: 600;
+  font-size: clamp(26px, 2.2vw, 32px);
+  color: var(--forest);
+}
+
+.desc {
+  font-weight: 500;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 28px;
+  color: var(--moss);
+}
+
+.callout {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: var(--mint);
+}
+
+.calloutBadge {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--leaf);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.calloutTitle {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--forest);
+}
+
+.calloutBody {
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--moss);
+}
+
+.optLabel {
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.04px;
+  color: var(--moss);
+}
+
+.swatches {
+  display: flex;
+  gap: 14px;
+}
+
+.swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5px var(--sage);
+  transition: transform 0.15s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.06);
+}
+
+.swatch[aria-current="true"] {
+  box-shadow: inset 0 0 0 4px var(--leaf);
+}
+
+.sizeHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sizeGuideLink {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--leaf);
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buyRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.qty {
+  padding: 6px 10px;
+  font-size: 17px;
+  gap: 8px;
+}
+
+.addBtn {
+  flex: 1;
+}
+
+.addedNote {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--leaf);
+  margin-top: -8px;
+}
+
+.addedNote a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lowStock {
+  font-weight: 700;
+  font-size: 13px;
+  color: #c2410c;
+  margin-top: -8px;
+}
+
+.perks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--forest);
+}
+
+.perks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.perks li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--leaf);
+}
+
+.accordions {
+  width: 100%;
+}
+
+.accordion {
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 110px;
+}
+
+.accHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--pine);
+  text-align: left;
+}
+
+.accHead span:last-child {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--leaf);
+}
+
+.accBody {
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--moss);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accBody a {
+  color: var(--leaf);
+  font-weight: 700;
+}
+
+.sizeTable {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.sizeTable th,
+.sizeTable td {
+  padding: 10px 8px;
+  border: 1px solid var(--line);
+}
+
+.sizeTable th {
+  font-weight: 800;
+  color: var(--forest);
+  background: var(--mist);
+}
+
+/* ---------------------------------------------------------------- Story --- */
+.story {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding-block: 96px;
+}
+
+.storyPhoto {
+  flex: 0 1 640px;
+  min-width: 0;
+  aspect-ratio: 640 / 460;
+  border-radius: 28px;
+}
+
+.storyCopy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* -------------------------------------------------------------- Related --- */
+.related {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-block: 96px;
+}
+
+.relatedTitle {
+  font-weight: 600;
+  font-size: clamp(32px, 3.06vw, 44px);
+  letter-spacing: -0.02em;
+  color: var(--pine);
+}
+
+@media (max-width: 1080px) {
+  .main,
+  .story {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .gallery {
+    position: static;
+    flex: none;
+  }
+  .storyPhoto {
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .crumb {
+    padding-block: 20px;
+  }
+  .main {
+    padding-bottom: 64px;
+  }
+  .mainPhoto {
+    aspect-ratio: 350 / 400;
+    border-radius: 22px;
+  }
+  .thumbs {
+    gap: 10px;
+  }
+  .thumb {
+    border-radius: 12px;
+  }
+  .thumb :global(.photo__label),
+  .thumb :global(.photo__caption) {
+    display: none;
+  }
+  .info {
+    gap: 18px;
+  }
+  .callout {
+    padding: 18px;
+    gap: 14px;
+  }
+  .story,
+  .related {
+    padding-block: 64px;
+  }
+}
