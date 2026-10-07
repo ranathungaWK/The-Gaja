@@ -1,22 +1,10 @@
 /* ---------------------------------------------------------------- Hero --- */
 .hero {
   display: flex;
-  align-items: center;
-  gap: 56px;
-  padding-block: 72px;
-}
-
-.heroCopy {
-  flex: 1;
-  min-width: 0;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 28px;
-}
-
-.heroLead {
-  line-height: 31px;
+  align-items: stretch;
+  gap: 48px;
+  padding-block: 72px;
 }
 
 .ctas {
@@ -53,14 +41,59 @@
 
 .heroMedia {
   position: relative;
-  flex: 0 1 600px;
+  width: 100%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+/* The frame takes the photo's own proportions (1182 x 492) so nothing is cropped.
+   If the original photo has a different shape, update this ratio to match it. */
 .heroPhoto {
   width: 100%;
-  aspect-ratio: 600 / 660;
+  aspect-ratio: 1182 / 492;
   border-radius: 28px;
+}
+
+/* Headline, CTAs and trust badges. On wide screens they sit on the right of
+   the photo (see the min-width query below); on narrow ones they stack above it. */
+.heroOverlay {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 901px) {
+  /* Always the dark palette here so the copy stays legible on the image in both themes. */
+  .heroOverlay {
+    --white: #0d1712;
+    --mint: #1a3327;
+    --forest: #e3f0e4;
+    --leaf: #5cc48a;
+    --pine: #f2faf5;
+    order: 0;
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 58%;
+    padding: 40px 48px;
+    border-radius: 0 28px 28px 0;
+    background: linear-gradient(to left, rgba(8, 18, 12, 0.85) 0%, rgba(8, 18, 12, 0.7) 60%, rgba(8, 18, 12, 0) 100%);
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    gap: 24px;
+  }
+  .heroOverlay .ctas,
+  .heroOverlay .trust {
+    justify-content: flex-end;
+  }
+}
+
+.heroTitle {
+  font-size: clamp(40px, 5.6vw, 80px);
 }
 
 .fundCard {
@@ -320,7 +353,6 @@
   width: 100%;
   height: 260px;
 }
-
 .stepBody {
   display: flex;
   flex-direction: column;
@@ -397,14 +429,10 @@
     flex-direction: column;
     align-items: stretch;
   }
-  .heroMedia,
   .progressCard,
   .creatorPhoto {
     flex: none;
     width: 100%;
-  }
-  .heroPhoto {
-    aspect-ratio: 4 / 3;
   }
   .creatorPhoto {
     aspect-ratio: 4 / 3;
@@ -428,12 +456,6 @@
     padding-block: 32px 48px;
     gap: 32px;
   }
-  .heroCopy {
-    gap: 20px;
-  }
-  .heroLead {
-    line-height: 1.55;
-  }
   .ctas {
     width: 100%;
     flex-direction: column;
@@ -446,14 +468,16 @@
     font-size: 13px;
   }
   .heroPhoto {
-    aspect-ratio: 350 / 380;
+    border-radius: 22px;
   }
+  /* The wide photo is too short on phones to hold the card, so it sits below it. */
   .fundCard {
-    left: 16px;
-    bottom: 16px;
-    width: auto;
-    right: 16px;
+    position: static;
+    width: 100%;
     max-width: none;
+    margin-top: 16px;
+    border: 1px solid var(--line);
+    box-shadow: none;
   }
   .twoSides,
   .block,

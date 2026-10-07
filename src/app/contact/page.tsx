@@ -46,7 +46,7 @@ export default async function ContactPage() {
               <span>{c.replyTime}</span>
               <span>{c.replyValue}</span>
             </div>
-            <Photo className={styles.studio} alt={c.studioPhoto} caption={`${c.studioPhoto} 480 x 220`} photoLabel={t.common.photo} />
+            <Photo className={styles.studio} src="/images/contact-studio.jpg" alt={c.studioPhoto} sizes="(max-width: 900px) 100vw, 480px" position="center 60%" />
           </div>
         </div>
       </section>

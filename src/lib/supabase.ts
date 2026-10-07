@@ -22,7 +22,8 @@ export type Bucket = "product-images" | "site-media" | "receipts";
 
 export function publicUrl(bucket: Bucket, path: string | null | undefined): string | null {
   if (!path) return null;
-  if (/^https?:\/\//.test(path)) return path;
+  // Absolute URLs and files shipped in /public (e.g. "/images/tees/hope-tee.webp") pass through.
+  if (/^https?:\/\//.test(path) || path.startsWith("/")) return path;
   return `${process.env.SUPABASE_URL}/storage/v1/object/public/${bucket}/${path
     .split("/")
     .map(encodeURIComponent)

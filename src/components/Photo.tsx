@@ -13,14 +13,16 @@ type PhotoProps = {
   sizes?: string;
   priority?: boolean;
   compact?: boolean;
+  /** CSS object-position for real images, e.g. "60% center". */
+  position?: string;
   children?: ReactNode;
 };
 
-export function Photo({ src, alt, caption, photoLabel = "PHOTO", className, style, sizes, priority, compact, children }: PhotoProps) {
+export function Photo({ src, alt, caption, photoLabel = "PHOTO", className, style, sizes, priority, compact, position, children }: PhotoProps) {
   return (
     <div className={`photo${compact ? " photo--compact" : ""}${className ? ` ${className}` : ""}`} style={style}>
       {src ? (
-        <Image className="photo__img" src={src} alt={alt} fill sizes={sizes ?? "(max-width: 900px) 100vw, 50vw"} priority={priority} />
+        <Image className="photo__img" src={src} alt={alt} fill sizes={sizes ?? "(max-width: 900px) 100vw, 50vw"} priority={priority} style={position ? { objectPosition: position } : undefined} />
       ) : (
         <>
           <span className="photo__icon" aria-hidden="true" />

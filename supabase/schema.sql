@@ -281,26 +281,36 @@ insert into public.fund_settings (id, offline_raised, offline_shirts)
 values (1, 184000, 184) on conflict (id) do nothing;
 
 insert into public.products (slug, name, summary, description, story_title, story_body,
-                             colour_name, colour_hex, category, price, sort_order, image_alts)
+                             colour_name, colour_hex, category, price, sort_order, images, image_alts)
 select * from (values
-  ('the-line-tee', 'The Line Tee', 'Cotton tee  /  S to XXL',
-   'A white tee with a single line through the middle. One side is the field, the other is the forest. The print sits where they meet.',
-   'Drawing the line.',
-   'The Line is about the edge where a village ends and the forest begins. Nobody chose it, but everyone lives with it.',
-   'White tee', '#ffffff', 'light', 3200, 1,
-   array['White tee flat-lay, soft daylight','Back view','Fabric close-up','Print detail']),
-  ('night-watch-tee', 'Night Watch Tee', 'Cotton tee  /  S to XXL',
-   'A black tee for the long hours between dusk and dawn. One side keeps watch over the harvest. The other keeps to the old path. The print holds both in the same frame.',
-   'Keeping watch.',
-   'Night Watch is about the hours when fields are quiet and everyone is listening. A lantern on one side, a shadow on the other, and a line that neither side drew.',
-   'Black tee', '#10281b', 'dark', 3200, 2,
-   array['Black tee flat-lay, soft daylight','Back view','Fabric close-up','Print detail']),
-  ('hold-ground-tee', 'Hold Ground Tee', 'Cotton tee  /  S to XXL',
-   'A forest green tee for everyone standing their ground. Farmers hold their fields; elephants hold their routes. The fund helps both hold on.',
-   'Holding ground.',
-   'Hold Ground is about staying where you belong without having to fight for it. A fence that guides, a light that warns, and a harvest that survives.',
-   'Forest green tee', '#1d4b34', 'green', 3200, 3,
-   array['Forest green tee flat-lay, soft daylight','Back view','Fabric close-up','Print detail'])
+  ('tusker-tee', 'Tusker Tee', 'Cotton tee  /  S to XXL',
+   'A black tee with a tusker walking out of a burst of red. The hand-lettered type above mixes Sinhala and Latin letters, the way the island mixes its voices.',
+   'Walking out of the red.',
+   'Tusker is about the elephants that keep walking toward the fields because the forest keeps shrinking. The red behind him is the cost, paid on both sides of the fence.',
+   'Black tee', '#111111', 'dark', 3200, 1,
+   array['/images/tees/tusker-tee.webp','/images/tees/tusker-tee-print.webp'],
+   array['Tusker Tee, black, back print','Print close-up: a tusker over a red splatter with hand-lettered type']),
+  ('headline-tee', 'Headline Tee', 'Cotton tee  /  S to XXL',
+   'A cream tee with an elephant standing in front of a row of press microphones. Every crew wants the story. Few stay to hear it.',
+   'Facing the press.',
+   'Headline is about the elephant in the room: a conflict that makes the news every season and leaves it just as fast. The microphones all point the same way.',
+   'Cream tee', '#fde6c4', 'light', 3200, 2,
+   array['/images/tees/headline-tee.webp','/images/tees/headline-tee-print.webp'],
+   array['Headline Tee, cream, back print','Print close-up: an elephant behind press microphones on a red splash']),
+  ('hope-tee', 'Hope Tee', 'Cotton tee  /  S to XXL',
+   'A black tee with an elephant family walking together above one red word, set over newspaper columns.',
+   'Holding on to hope.',
+   'Hope is about the herd that stays together, and the families on the other side of the fence who want the same thing: a safe night and a harvest that survives.',
+   'Black tee', '#111111', 'dark', 3200, 3,
+   array['/images/tees/hope-tee.webp','/images/tees/hope-tee-print.webp'],
+   array['Hope Tee, black, back print','Print close-up: an elephant family above the word HOPE']),
+  ('every-face-tee', 'Every Face Tee', 'Cotton tee  /  S to XXL',
+   'A black tee with a tusker and a farmer on a bicycle in the same frame, over a streak of red. Every face tells a story.',
+   'Every face tells a story.',
+   'Every Face is about the people and the elephants who meet on the same village road at dusk. Neither chose the meeting. Both carry the story home.',
+   'Black tee', '#111111', 'dark', 3200, 4,
+   array['/images/tees/every-face-tee.webp','/images/tees/every-face-tee-print.webp'],
+   array['Every Face Tee, black, back print','Print close-up: a tusker and a farmer on a bicycle with the words Every Face Tells a Story'])
 ) v
 where not exists (select 1 from public.products);
 

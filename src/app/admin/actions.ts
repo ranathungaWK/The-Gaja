@@ -102,7 +102,8 @@ export async function removeProductImage(form: FormData) {
   const path = str(form, "path");
   const { data: product, error } = await db().from("products").select("images").eq("id", id).single();
   if (error) throw error;
-  await db().storage.from("product-images").remove([path]);
+  // Images under /public ship with the site, so only uploaded ones live in storage.
+  if (!path.startsWith("/")) await db().storage.from("product-images").remove([path]);
   await db()
     .from("products")
     .update({ images: product.images.filter((p: string) => p !== path) })

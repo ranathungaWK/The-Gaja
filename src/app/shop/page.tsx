@@ -108,7 +108,7 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
                   {t.shop.seeImpact}
                 </Link>
               </div>
-              <Photo className={styles.fundTilePhoto} alt={t.shop.impactPhoto} caption={`${t.shop.impactPhoto} 340 x 500`} photoLabel={t.common.photo} />
+              <Photo className={styles.fundTilePhoto} src="/images/shop-fence-line.jpg" alt={t.shop.impactPhoto} sizes="(max-width: 1080px) 100vw, 340px" position="65% center" />
             </div>
           </div>
         </div>

@@ -19,9 +19,9 @@ export default async function CausePage() {
     { value: "397", label: c.n3Label, sub: c.n3Sub },
   ];
   const reasons = [
-    { title: c.w1, body: c.w1b, photo: c.w1p },
-    { title: c.w2, body: c.w2b, photo: c.w2p },
-    { title: c.w3, body: c.w3b, photo: c.w3p },
+    { title: c.w1, body: c.w1b, photo: c.w1p, src: "/images/cause-forest-edge.jpg", position: undefined },
+    { title: c.w2, body: c.w2b, photo: c.w2p, src: "/images/cause-damaged-paddy.jpg", position: undefined },
+    { title: c.w3, body: c.w3b, photo: c.w3p, src: "/images/cause-watch-hut.jpg", position: "center 22%" },
   ];
   const helps = [
     { title: c.h1, body: c.h1b },
@@ -50,7 +50,7 @@ export default async function CausePage() {
               </Link>
             </div>
           </div>
-          <Photo className={`${styles.photoV} ${styles.heroPhoto}`} alt={c.heroPhoto} caption={`${c.heroPhoto} 640 x 560`} photoLabel={t.common.photo} priority />
+          <Photo className={`${styles.photoV} ${styles.heroPhoto}`} src="/images/cause-paddy-elephants.jpg" alt={c.heroPhoto} sizes="(max-width: 900px) 100vw, 640px" position="55% center" priority />
         </div>
       </section>
 
@@ -84,7 +84,7 @@ export default async function CausePage() {
           <div className={styles.grid3}>
             {reasons.map((r) => (
               <article key={r.title} className={styles.reason}>
-                <Photo className={`${styles.photoV} ${styles.reasonPhoto}`} alt={r.photo} caption={`${r.photo} 400 x 240`} photoLabel={t.common.photo} />
+                <Photo className={`${styles.photoV} ${styles.reasonPhoto}`} src={r.src} alt={r.photo} caption={`${r.photo} 400 x 240`} photoLabel={t.common.photo} sizes="(max-width: 900px) 100vw, 400px" position={r.position} />
                 <div className={styles.reasonBody}>
                   <h3 className={styles.h3}>{r.title}</h3>
                   <p className="t-body" style={{ fontSize: 16, lineHeight: "25px" }}>
@@ -99,7 +99,7 @@ export default async function CausePage() {
 
       <section className="section">
         <div className={`container ${styles.split}`} style={{ paddingBlock: 104 }}>
-          <Photo className={`${styles.photoV} ${styles.helpsPhoto}`} alt={c.helpsPhoto} caption={`${c.helpsPhoto} 560 x 560`} photoLabel={t.common.photo} />
+          <Photo className={`${styles.photoV} ${styles.helpsPhoto}`} src="/images/steps/solar-fence.jpg" alt={c.helpsPhoto} sizes="(max-width: 900px) 100vw, 560px" position="45% center" />
           <div className={styles.copy}>
             <span className="pill" style={{ letterSpacing: 0 }}>
               {c.helpsPill}
