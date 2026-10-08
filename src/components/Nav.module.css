@@ -190,6 +190,17 @@
   justify-content: center;
 }
 
+.mPrefs {
+  display: contents;
+}
+
+.menuPrefs {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+}
+
 .mBag {
   padding: 9px 14px;
   border-radius: 999px;
@@ -307,12 +318,18 @@
   }
   .logo {
     gap: 8px;
+    flex: 0 1 auto;
+    min-width: 0;
   }
   .logoMark {
     width: 34px;
   }
   .logoWord {
     font-size: 26px;
+  }
+  .mobileActions {
+    flex: none;
+    padding-left: 12px;
   }
   .links,
   .actions {
@@ -323,8 +340,27 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
+  .mPrefs {
+    display: none;
+  }
+  .menuPrefs {
+    display: flex;
+  }
+  .menu {
+    padding-top: 12px;
+  }
   .logoMark {
+    width: 30px;
+  }
+  .logoWord {
+    font-size: clamp(17px, 5.6vw, 24px);
+  }
+}
+
+@media (max-width: 340px) {
+  /* .logo prefix outranks the global .brand-mark display rule */
+  .logo .logoMark {
     display: none;
   }
 }

@@ -191,8 +191,11 @@ export function Nav({ raised, goal }: { raised: number; goal: number }) {
           </div>
 
           <div className={styles.mobileActions}>
-            <LanguageMenu mobile />
-            <ThemeToggle mobile />
+            {/* On phones these move into the menu sheet so the bar never overflows. */}
+            <div className={styles.mPrefs}>
+              <LanguageMenu mobile />
+              <ThemeToggle mobile />
+            </div>
             <Link href="/bag" className={styles.mBag}>
               {bagLabel}
             </Link>
@@ -219,6 +222,10 @@ export function Nav({ raised, goal }: { raised: number; goal: number }) {
               </Link>
             ))}
           </nav>
+          <div className={styles.menuPrefs}>
+            <LanguageMenu />
+            <ThemeToggle />
+          </div>
           <div className={styles.menuFund}>
             <p>{t.nav.raised}</p>
             <p>{lkr(raised)}</p>

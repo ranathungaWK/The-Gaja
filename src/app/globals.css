@@ -76,6 +76,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Nothing may widen the page past the phone screen; clip keeps sticky headers working. */
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
