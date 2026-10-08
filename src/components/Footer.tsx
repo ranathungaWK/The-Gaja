@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n";
 import { fill } from "@/lib/i18n";
+import { LogoMark, Wordmark } from "./Icons";
 import styles from "./Footer.module.css";
 
 export function Announcement({ t }: { t: Dictionary }) {
@@ -18,6 +19,10 @@ export function Footer({ t, products }: { t: Dictionary; products: { slug: strin
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
+            <Link href="/" className={styles.logo} aria-label={t.brand.home}>
+              <LogoMark className={styles.logoMark} />
+              <Wordmark className={styles.logoWord} />
+            </Link>
             <p className={styles.tagline}>
               {t.footer.a}
               <br />

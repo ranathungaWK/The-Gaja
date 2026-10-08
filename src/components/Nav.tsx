@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useTransition } from "react";
 import { setLocale } from "@/app/actions";
 import { lkr, percent } from "@/lib/format";
 import type { Locale } from "@/lib/i18n";
-import { CheckIcon, ChevIcon, GlobeIcon, LogoDot, MoonIcon, SunIcon } from "./Icons";
+import { CheckIcon, ChevIcon, GlobeIcon, LogoMark, MoonIcon, SunIcon, Wordmark } from "./Icons";
 import { useCart, useI18n, useTheme } from "./Providers";
 import styles from "./Nav.module.css";
 
@@ -166,9 +166,9 @@ export function Nav({ raised, goal }: { raised: number; goal: number }) {
     <>
       <header className={styles.nav} ref={headerRef}>
         <div className={styles.inner}>
-          <Link href="/" className={styles.logo} aria-label="GAJA home">
-            <LogoDot />
-            <span>GAJA</span>
+          <Link href="/" className={styles.logo} aria-label={t.brand.home}>
+            <LogoMark className={styles.logoMark} />
+            <Wordmark className={styles.logoWord} />
           </Link>
 
           <nav className={styles.links} aria-label="Main">

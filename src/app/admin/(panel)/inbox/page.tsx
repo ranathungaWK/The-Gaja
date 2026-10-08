@@ -19,7 +19,7 @@ export default async function AdminInbox() {
           <div key={m.id} className={styles.card} style={{ background: "var(--white)", opacity: m.handled ? 0.6 : 1 }}>
             <div className={styles.cardHead}>
               <div>
-                <strong>{m.name}</strong> · <a href={`mailto:${m.email}?subject=Re: your message to GAJA`}>{m.email}</a>
+                <strong>{m.name}</strong> · <a href={`mailto:${m.email}?subject=Re: your message to Ali Mankadin Eha`}>{m.email}</a>
                 <p className={styles.muted}>
                   <span className={styles.badge}>{TOPICS[m.topic] ?? m.topic}</span> {new Date(m.created_at).toLocaleString("en-GB", { timeZone: "Asia/Colombo" })}
                 </p>

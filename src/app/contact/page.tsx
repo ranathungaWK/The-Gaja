@@ -34,13 +34,13 @@ export default async function ContactPage() {
         <div className={`container ${styles.formRow}`}>
           <ContactForm />
           <div className={styles.info}>
-            <a className={styles.infoCard} href="mailto:hello@gaja.lk">
+            <a className={styles.infoCard} href="mailto:hello@alimankadineha.lk">
               <span>{c.emailL}</span>
-              <span>hello@gaja.lk</span>
+              <span>hello@alimankadineha.lk</span>
             </a>
-            <a className={styles.infoCard} href="https://instagram.com/gaja.lk" target="_blank" rel="noreferrer">
+            <a className={styles.infoCard} href="https://instagram.com/alimankadineha" target="_blank" rel="noreferrer">
               <span>{c.instagram}</span>
-              <span>@gaja.lk</span>
+              <span>@alimankadineha</span>
             </a>
             <div className={styles.infoCard}>
               <span>{c.replyTime}</span>

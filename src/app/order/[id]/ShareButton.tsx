@@ -9,7 +9,7 @@ export function ShareButton() {
 
   const share = async () => {
     const url = `${window.location.origin}/cause`;
-    const data = { title: "GAJA — Two sides. One land.", text: t.cause.ctaBody, url };
+    const data = { title: `${t.brand.name} — Two sides. One land.`, text: t.cause.ctaBody, url };
     try {
       if (navigator.share) {
         await navigator.share(data);

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Google_Sans_Flex, Noto_Sans_Sinhala } from "next/font/google";
+import { Abhaya_Libre, Google_Sans_Flex, Noto_Sans_Sinhala } from "next/font/google";
 import { Announcement, Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Providers } from "@/components/Providers";
@@ -23,19 +23,28 @@ const sinhala = Noto_Sans_Sinhala({
   display: "swap",
 });
 
+// Display face for the Sinhala brand name in the nav and footer.
+const brand = Abhaya_Libre({
+  subsets: ["sinhala"],
+  weight: ["800"],
+  variable: "--font-brand",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "http://localhost:3000"),
-  title: { default: "GAJA — Two sides. One land.", template: "%s — GAJA" },
+  title: { default: "Ali Mankadin Eha — Two sides. One land.", template: "%s — Ali Mankadin Eha" },
   description:
     "An independent T-shirt brand from Sri Lanka. LKR 1,000 from every shirt funds elephant-safe fences, warning lights and harvest support for farming families.",
-  applicationName: "GAJA",
-  appleWebApp: { capable: true, title: "GAJA", statusBarStyle: "default" },
+  applicationName: "Ali Mankadin Eha",
+  appleWebApp: { capable: true, title: "Ali Mankadin Eha", statusBarStyle: "default" },
   icons: {
     icon: [
-      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/icons/favicon-48.png?v=3", sizes: "48x48", type: "image/png" },
+      { url: "/icons/icon-192.png?v=3", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png?v=3", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/icons/apple-touch-icon.png",
+    apple: "/icons/apple-touch-icon.png?v=3",
   },
   formatDetection: { telephone: false },
 };
@@ -55,7 +64,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const [stats, products] = await Promise.all([getFundStats(), getProducts()]);
 
   return (
-    <html lang={locale} data-theme="light" data-scroll-behavior="smooth" className={`${sans.variable} ${sinhala.variable}`} suppressHydrationWarning>
+    <html lang={locale} data-theme="light" data-scroll-behavior="smooth" className={`${sans.variable} ${sinhala.variable} ${brand.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

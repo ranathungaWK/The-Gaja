@@ -15,7 +15,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <header className={styles.top}>
           <div>
             <span className="pill">Admin</span>
-            <h1 className={styles.heading}>GAJA store</h1>
+            <h1 className={styles.heading}>Ali Mankadin Eha store</h1>
           </div>
           <div className={styles.topActions}>
             <Link href="/" className="btn btn--soft">

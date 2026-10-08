@@ -36,6 +36,22 @@
   gap: 18px;
 }
 
+.logo {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--band-text);
+}
+
+.logoMark {
+  width: 60px;
+}
+
+.logoWord {
+  font-size: 52px;
+}
+
 .tagline {
   font-weight: 600;
   font-size: clamp(40px, 4.45vw, 64px);

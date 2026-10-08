@@ -1,4 +1,4 @@
--- GAJA store schema. Safe to re-run: every statement is idempotent.
+-- Ali Mankadin Eha store schema. Safe to re-run: every statement is idempotent.
 
 create extension if not exists pgcrypto;
 

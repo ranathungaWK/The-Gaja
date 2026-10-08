@@ -6,7 +6,7 @@ import styles from "./cause.module.css";
 
 export const metadata: Metadata = {
   title: "The Cause",
-  description: "In Sri Lanka, elephants and farming families share the same land. GAJA funds fences, warning lights and harvest support.",
+  description: "In Sri Lanka, elephants and farming families share the same land. Ali Mankadin Eha funds fences, warning lights and harvest support.",
 };
 
 export default async function CausePage() {

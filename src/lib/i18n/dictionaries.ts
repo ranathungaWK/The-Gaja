@@ -1,4 +1,8 @@
 const en = {
+  brand: {
+    name: "Ali Mankadin Eha",
+    home: "Ali Mankadin Eha home",
+  },
   announcement: {
     desktop: "LKR 1,000 from every shirt funds elephant-safe fences and farmer support   |   Free delivery over LKR 8,000",
     mobile: "LKR 1,000 from every shirt funds the fence",
@@ -90,7 +94,7 @@ const en = {
     creatorPill: "Behind the brand",
     creatorA: "One person.",
     creatorB: "One idea.",
-    creatorBody: "GAJA started with a simple question: what if the people who wear a story could also help change how it ends? Every design is made and printed in Sri Lanka, and every cent for the fund is tracked in the open.",
+    creatorBody: "Ali Mankadin Eha started with a simple question: what if the people who wear a story could also help change how it ends? Every design is made and printed in Sri Lanka, and every cent for the fund is tracked in the open.",
     creatorPhotos: "Photos of the creator",
     creatorPhoto1: "The creator in a white shirt, standing beside a masked performer in saffron robes, with green hills behind.",
     creatorPhoto2: "The creator speaking into a microphone at an evening event.",
@@ -213,7 +217,7 @@ const en = {
     payment: "Payment",
     standardLine: "Standard delivery, 3 to 5 working days",
     expressLine: "Express delivery, 1 to 2 working days",
-    bankNote: "Bank transfer details: GAJA, Commercial Bank, 8001234567. Use {number} as the reference.",
+    bankNote: "Bank transfer details: Ali Mankadin Eha, Commercial Bank, 8001234567. Use {number} as the reference.",
     cardNote: "Our team will send a secure card payment link to your email.",
     impactPill: "Your impact",
     impactBody: "added to the fence fund by this order: {shirts} from your shirts and {extra} extra from you. Thank you for standing with both sides.",
@@ -230,7 +234,7 @@ const en = {
   cause: {
     pill: "The cause",
     title: "A fight no one asked for.",
-    lead: "In Sri Lanka, elephants and farming families share the same land, the same water and the same fear. Both sides lose when they meet at night in a field. GAJA exists to make those nights safer for everyone.",
+    lead: "In Sri Lanka, elephants and farming families share the same land, the same water and the same fear. Both sides lose when they meet at night in a field. Ali Mankadin Eha exists to make those nights safer for everyone.",
     seeFund: "See the fund",
     heroPhoto: "Wild elephants wading through flooded paddy fields in Sri Lanka.",
     numbersPill: "The numbers",
@@ -347,7 +351,7 @@ const en = {
     returns: "Returns",
     sizeGuide: "Size guide",
     contactFaq: "Contact and FAQ",
-    copyright: "{year} GAJA. Independent. Made by one person in Sri Lanka.",
+    copyright: "{year} Ali Mankadin Eha. Independent. Made by one person in Sri Lanka.",
     fundLine: "LKR 1,000 from every shirt goes to the fund.",
   },
   offline: {
@@ -364,6 +368,10 @@ const en = {
 export type Dictionary = typeof en;
 
 const si: Dictionary = {
+  brand: {
+    name: "අලිමංකඩින් එහා",
+    home: "අලිමංකඩින් එහා මුල් පිටුව",
+  },
   announcement: {
     desktop: "සෑම කමිසයකින්ම රු. 1,000ක් අලි-ආරක්ෂිත වැටවල් සහ ගොවි සහාය සඳහා   |   රු. 8,000ට වැඩි ඇණවුම්වලට නොමිලේ බෙදාහැරීම",
     mobile: "සෑම කමිසයකින්ම රු. 1,000ක් වැට අරමුදලට",
@@ -455,7 +463,7 @@ const si: Dictionary = {
     creatorPill: "සන්නාමය පිටුපස",
     creatorA: "එක් පුද්ගලයෙක්.",
     creatorB: "එක් අදහසක්.",
-    creatorBody: "GAJA ආරම්භ වූයේ සරල ප්‍රශ්නයකිනි: කතාවක් අඳින අයට එය අවසන් වන ආකාරය වෙනස් කිරීමටත් උදව් කළ හැකි නම්? සෑම මෝස්තරයක්ම ශ්‍රී ලංකාවේ නිර්මාණය කර මුද්‍රණය කරන අතර අරමුදලේ සෑම සතයක්ම විවෘතව සටහන් වේ.",
+    creatorBody: "අලිමංකඩින් එහා ආරම්භ වූයේ සරල ප්‍රශ්නයකිනි: කතාවක් අඳින අයට එය අවසන් වන ආකාරය වෙනස් කිරීමටත් උදව් කළ හැකි නම්? සෑම මෝස්තරයක්ම ශ්‍රී ලංකාවේ නිර්මාණය කර මුද්‍රණය කරන අතර අරමුදලේ සෑම සතයක්ම විවෘතව සටහන් වේ.",
     creatorPhotos: "නිර්මාණකරුගේ ඡායාරූප",
     creatorPhoto1: "සුදු කමිසයක් ඇඳි නිර්මාණකරු, කහ සිවුරු ඇඳි වෙස් මුහුණක් පැළඳි රංගන ශිල්පියෙකු අසල, පසුබිමේ කොළ පැහැති කඳු.",
     creatorPhoto2: "සවස උත්සවයකදී මයික්‍රෆෝනයකින් කතා කරන නිර්මාණකරු.",
@@ -578,7 +586,7 @@ const si: Dictionary = {
     payment: "ගෙවීම",
     standardLine: "සාමාන්‍ය බෙදාහැරීම, වැඩ කරන දින 3 සිට 5",
     expressLine: "ඉක්මන් බෙදාහැරීම, වැඩ කරන දින 1 සිට 2",
-    bankNote: "බැංකු විස්තර: GAJA, Commercial Bank, 8001234567. යොමුව ලෙස {number} භාවිත කරන්න.",
+    bankNote: "බැංකු විස්තර: Ali Mankadin Eha, Commercial Bank, 8001234567. යොමුව ලෙස {number} භාවිත කරන්න.",
     cardNote: "අපේ කණ්ඩායම ආරක්ෂිත කාඩ් ගෙවීම් සබැඳියක් ඔබේ ඊමේල් වෙත එවනු ඇත.",
     impactPill: "ඔබේ බලපෑම",
     impactBody: "මෙම ඇණවුමෙන් වැට අරමුදලට එකතු විය: ඔබේ කමිසවලින් {shirts}ක් සහ ඔබෙන් අමතර {extra}ක්. පැති දෙක සමඟම සිටීමට ස්තූතියි.",
@@ -595,7 +603,7 @@ const si: Dictionary = {
   cause: {
     pill: "අරමුණ",
     title: "කිසිවෙක් නොඉල්ලූ සටනක්.",
-    lead: "ශ්‍රී ලංකාවේ අලි සහ ගොවි පවුල් එකම බිම, එකම ජලය සහ එකම බිය බෙදා ගනිති. රාත්‍රියේ කෙතක හමු වූ විට පැති දෙකම අහිමි වෙයි. GAJA පවතින්නේ සැමට එම රාත්‍රීන් ආරක්ෂිත කිරීමටයි.",
+    lead: "ශ්‍රී ලංකාවේ අලි සහ ගොවි පවුල් එකම බිම, එකම ජලය සහ එකම බිය බෙදා ගනිති. රාත්‍රියේ කෙතක හමු වූ විට පැති දෙකම අහිමි වෙයි. අලිමංකඩින් එහා පවතින්නේ සැමට එම රාත්‍රීන් ආරක්ෂිත කිරීමටයි.",
     seeFund: "අරමුදල බලන්න",
     heroPhoto: "ශ්‍රී ලංකාවේ ජලයෙන් යට වූ කුඹුරු හරහා ගමන් කරන වන අලින්.",
     numbersPill: "සංඛ්‍යා",
@@ -712,7 +720,7 @@ const si: Dictionary = {
     returns: "ආපසු දීම",
     sizeGuide: "ප්‍රමාණ මාර්ගෝපදේශය",
     contactFaq: "සම්බන්ධතා සහ නිති ප්‍රශ්න",
-    copyright: "{year} GAJA. ස්වාධීනයි. ශ්‍රී ලංකාවේ එක් පුද්ගලයෙකු විසින් නිර්මිතයි.",
+    copyright: "{year} අලිමංකඩින් එහා. ස්වාධීනයි. ශ්‍රී ලංකාවේ එක් පුද්ගලයෙකු විසින් නිර්මිතයි.",
     fundLine: "සෑම කමිසයකින්ම රු. 1,000ක් අරමුදලට යයි.",
   },
   offline: {

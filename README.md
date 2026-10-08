@@ -1,6 +1,6 @@
-# GAJA — Two sides. One land.
+# Ali Mankadin Eha — Two sides. One land.
 
-Online store for GAJA, an independent T-shirt brand from Sri Lanka. LKR 1,000 from every shirt goes to a fund for elephant-safe fences, early-warning lights and harvest support. Built from the Figma design with Next.js 16 (App Router), Supabase (Postgres + Storage) and a PWA layer, so one responsive build serves desktop and mobile.
+Online store for Ali Mankadin Eha (අලිමංකඩින් එහා), an independent T-shirt brand from Sri Lanka. LKR 1,000 from every shirt goes to a fund for elephant-safe fences, early-warning lights and harvest support. Built from the Figma design with Next.js 16 (App Router), Supabase (Postgres + Storage) and a PWA layer, so one responsive build serves desktop and mobile.
 
 ## What's in it
 
@@ -40,7 +40,7 @@ npm run dev        # http://localhost:3000
 | `DATABASE_URL` | Session pooler connection string, only used by `npm run db:setup` |
 | `ADMIN_PASSWORD` | Password for `/admin` |
 | `ADMIN_SESSION_SECRET` | Signs the admin session cookie |
-| `SITE_URL` | (optional) Public URL, used for metadata, e.g. `https://gaja.lk` |
+| `SITE_URL` | (optional) Public URL, used for metadata, e.g. `https://alimankadineha.lk` |
 
 The direct database host (`db.<ref>.supabase.co`) is IPv6-only, so `DATABASE_URL` uses the IPv4 session pooler (`aws-0-ap-southeast-2.pooler.supabase.com`).
 

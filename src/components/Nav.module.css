@@ -20,12 +20,17 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 30px;
-  letter-spacing: 1.2px;
+  gap: 12px;
   color: var(--forest);
   flex: none;
+}
+
+.logoMark {
+  width: 44px;
+}
+
+.logoWord {
+  font-size: 34px;
 }
 
 .links {
@@ -302,12 +307,12 @@
   }
   .logo {
     gap: 8px;
-    font-size: 24px;
-    letter-spacing: 0.96px;
   }
-  .logo svg {
-    width: 20px;
-    height: 20px;
+  .logoMark {
+    width: 34px;
+  }
+  .logoWord {
+    font-size: 26px;
   }
   .links,
   .actions {
@@ -319,7 +324,7 @@
 }
 
 @media (max-width: 380px) {
-  .logo span {
+  .logoMark {
     display: none;
   }
 }

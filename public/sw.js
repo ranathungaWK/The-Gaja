@@ -1,15 +1,15 @@
-/* GAJA service worker: offline-capable PWA shell.
+/* Ali Mankadin Eha service worker: offline-capable PWA shell.
  *
  * - Pages: network first, fall back to the last cached copy, then /offline.
  * - Build assets (/_next/static): cache first; their URLs are content-hashed.
  * - Images and fonts: stale-while-revalidate.
  * - Never cached: non-GET requests (Server Actions, orders), /admin, /api.
  */
-const VERSION = "gaja-v1";
+const VERSION = "gaja-v3";
 const PAGES = `${VERSION}-pages`;
 const STATIC = `${VERSION}-static`;
 const MEDIA = `${VERSION}-media`;
-const PRECACHE = ["/offline", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
+const PRECACHE = ["/offline", "/manifest.webmanifest", "/icons/icon-192.png?v=3", "/icons/icon-512.png?v=3"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

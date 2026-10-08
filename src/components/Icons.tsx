@@ -74,10 +74,16 @@ export function CheckBadge({ className }: { className?: string }) {
   );
 }
 
-export function LogoDot({ size = 26 }: { size?: number }) {
+// The circle mark is a single-colour PNG mask, painted with currentColor so it follows the theme.
+export function LogoMark({ className }: { className?: string }) {
+  return <span className={`brand-mark${className ? ` ${className}` : ""}`} aria-hidden="true" />;
+}
+
+// The brand name is always set in Sinhala, whatever the page language.
+export function Wordmark({ className }: { className?: string }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 26 26" aria-hidden="true">
-      <circle cx="13" cy="13" r="13" fill="var(--leaf)" />
-    </svg>
+    <span className={`brand-word${className ? ` ${className}` : ""}`} lang="si" aria-hidden="true">
+      අලි මංකඩින් එහා
+    </span>
   );
 }
